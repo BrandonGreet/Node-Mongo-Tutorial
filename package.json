@@ -1,0 +1,26 @@
+{
+  "name": "NodeMongoDBTutorial",
+  "version": "1.0.0",
+  "description": "I use this repo to store tutorials I'm working on. ### Below are subjects of tutorials I use this repo for. 1. Node.js (current) 2. MongoDB",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrandonGreet/Node-Mongo-Tutorial.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrandonGreet/Node-Mongo-Tutorial/issues"
+  },
+  "homepage": "https://github.com/BrandonGreet/Node-Mongo-Tutorial#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongodb": "^3.1.13",
+    "path": "^0.12.7"
+  }
+}

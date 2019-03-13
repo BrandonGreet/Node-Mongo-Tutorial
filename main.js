@@ -16,9 +16,13 @@ server.on("request", (request, response) => {
 	});
 
 	// Listens for the end of a request
-	request.on("end", () => {
-		body = body.concat.toString();
-	});
+	request
+		.on("end", () => {
+			body = body.concat.toString();
+		})
+		.on("error", error => {
+			console.log(error);
+		});
 
 	// The response parameter will get sent back to the client
 	// We can mess with its https status code, its headers, content, etc
@@ -30,6 +34,14 @@ server.on("request", (request, response) => {
 	});*/
 
 	// Writes the body of the response
-	response.write("Hello World!");
+	response.on("error", error => {
+		console.log(error);
+	});
+	response.write("Hello World!\n");
 	response.end();
 });
+
+// Server begins listening on a given port 
+server.listen(8008, () => {
+	console.log("Server is listening on 8008");
+})
